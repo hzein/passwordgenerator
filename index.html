@@ -1,0 +1,58 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Karla:wght@400;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1>Generate a</h1>
+        <h1 class="title-2nd-part">random password</h1>
+        <p>Never use an insecure password again.</p>
+        <form id="options-form">
+            <div class="inputs">
+                <label>Password length:</label>
+                <input 
+                        type="number"
+                        name="password-length"
+                        min="8"
+                        max="30"
+                    >
+                <label>Toggle Numbers:</label>
+                <label class="switch">
+                    <input 
+                        type="checkbox"
+                        name="toggle-num"
+                        id="toggle-num"
+                        onclick="toggleNum()"
+                    >
+                    <span class="slider round"></span>
+                </label>
+                <label>Toggle Symbols:</label>
+                <label class="switch">
+                    <input 
+                        type="checkbox"
+                        name="toggle-symbol"
+                        id="toggle-symbol"
+                        onclick="toggleSymbol()"
+                    >
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <button type="submit">Generate passwords</button>
+        </form>
+        
+        <div class="border"></div>
+        <div class="generated-passwords">
+            <div 
+                id="password-one-el" 
+                class="password"
+            ></div>
+            <div 
+                id="password-two-el" 
+                class="password"
+            ></div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
